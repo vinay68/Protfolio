@@ -1,0 +1,308 @@
+body {
+    background-color: #DAE2B6;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 80px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    gap: 50px;
+    margin: 80px auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+
+.circle-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 100px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    min-width: 70px;
+    min-height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    background: conic-gradient(blue 85%, white 0%);
+    position: relative;
+    margin-left: 0;
+}
+
+.circle::after {
+    content: '';
+    width: 80px;
+    height: 80px;
+    background: #DAE2B6;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circle span {
+    position: absolute;
+    z-index: 1;
+}
+
+.css-circle {
+    background: conic-gradient(green 70%, white 0%);
+}
+
+.js-circle {
+    background: conic-gradient(orange 60%, white 0%);
+}
+
+.c-circle {
+    background: conic-gradient(red 90%, white 0%);
+}
+ 
+.skills-wrapper {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1024px;
+}
+
+
+.skills {
+    width: 100%;
+    max-width: 600px;
+    margin-left: 100px;
+}
+
+.skills h3 {
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    color: black;
+    font-size: 16px;
+}
+
+.progress-bar {
+    background: white;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.progress-bar div {
+    height: 10px;
+    border-radius: 5px;
+    width: 0%;
+}
+
+.progress-bar div span {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background: black;
+    float: right;
+    margin-top: -10px;
+    margin-right: -20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+}
+
+
+.html {
+    background: blue;
+    animation: html 2s ease-in-out forwards;
+}
+
+.css {
+    background: green;
+    animation: css 2s ease-in-out forwards;
+}
+
+.javascript {
+    background: orange;
+    animation: javascript 2s ease-in-out forwards;
+}
+
+.c {
+    background: red;
+    animation: c 2s ease-in-out forwards;
+}
+
+@keyframes html {
+    0% { width: 0%; }
+    100% { width: 90%; }
+}
+
+@keyframes css {
+    0% { width: 0%; }
+    100% { width: 70%; }
+}
+
+@keyframes javascript {
+    0% { width: 0%; }
+    100% { width: 40%; }
+}
+
+@keyframes c {
+    0% { width: 0%; }
+    100% { width: 60%; }
+}
+
+
+.arrow i {
+    border: 2px solid black;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    margin-top: 470px;
+    margin-left: 12px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.arrow i:hover {
+    color: cyan;
+    transform: scale(1.1);
+}
+
+.arrow a {
+    text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    .skills-wrapper {
+        flex-direction: row;
+    }
+
+    .professional-skills,
+    .skills {
+        flex: 1 1 45%;
+    }
+
+    .circle-container,
+    .skills {
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .head {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .circle {
+        width: 80px;
+        height: 80px;
+        font-size: 13px;
+    }
+
+    .circle::after {
+        width: 60px;
+        height: 60px;
+    }
+
+    .arrow i {
+        margin-top: 300px;
+        margin-left: 8px;
+        width: 26px;
+        height: 26px;
+        font-size: 18px;
+    }
+    .js-circle{
+        margin-top: 40px;
+    }
+    .c-circle{
+        margin-top: 40px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .circle-container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+
+    .circle {
+        width: 70px;
+        height: 70px;
+        font-size: 12px;
+    }
+
+    .circle::after {
+        width: 50px;
+        height: 50px;
+    }
+
+    .arrow i {
+        margin-top: 200px;
+        font-size: 16px;
+    }
+    .js-circle{
+        margin-top: 40px;
+    }
+    .c-circle{
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .skills-wrapper {
+        justify-content: center;
+    }
+
+    .skills, .professional-skills {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-wrapper {
+        justify-content: center;
+    }
+
+    .skills, .professional-skills {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-wrapper {
+        justify-content: center;
+        
+    }
+
+    .skills, .professional-skills {
+        margin: 0 auto;
+    }
+}
+

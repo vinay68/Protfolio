@@ -1,0 +1,22 @@
+.pa {
+  background-color: black;
+  color: whitesmoke;
+  height: 100px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px; /* Helps add space on small screens */
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Responsive styles for screens below 600px */
+@media (max-width: 600px) {
+  .pa {
+    height: auto; /* Allow it to grow with content */
+    flex-direction: column;
+    padding: 20px 10px;
+    font-size: 1rem;
+  }
+}

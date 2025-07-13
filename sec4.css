@@ -1,0 +1,122 @@
+.sec4{
+  padding-top: 0px;
+}
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.box1,
+.box2 {
+  border: 2px solid black;
+  width: 470px;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.inner1,
+.inner2 {
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.inner1 {
+  background-image: url('calculator_project.png');
+}
+
+.inner2 {
+  background-image: url('project1.png');
+}
+
+.heading {
+  font-size: 20px;
+  color: darkorange;
+  text-align: center;
+  margin: 10px auto;
+}
+
+p {
+  color: black;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* ✅ Button group */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.btn-group button {
+  height: 40px;
+  width: 150px;
+  background-color: darkorange;
+  color: black;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-group button:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn-group button a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+  text-align: center;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .box1,
+  .box2 {
+    width: 90%;
+  }
+
+  .inner1,
+  .inner2 {
+    height: 180px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-group button {
+    width: 100%;
+  }
+}
